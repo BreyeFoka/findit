@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Search from './Search'
 
 const Navbar = ({darktheme, setDarktheme}) => {
   return (
@@ -10,8 +11,10 @@ const Navbar = ({darktheme, setDarktheme}) => {
                     FindIt 
                 </p>
             </Link>
-            <button type='button' onClick={() => setDarktheme(!darktheme)} className='text-xl dark:bg-gray-50 dark:text-gray-800 bg-white border rounded-full px-2 py-1 hover:shadow-lg '> {darktheme ? 'Light' : 'Dark'}</button>
+            <button type='button' onClick={() => setDarktheme(!darktheme)} className='text-xl dark:bg-gray-300 dark:text-gray-800 bg-gray-400 border rounded-full px-2 py-1 hover:shadow-lg '> {darktheme ? 'Light' : 'Dark'}</button>
+            
         </div>
+        <Search />
     </div>
   )
 }

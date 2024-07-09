@@ -1,8 +1,19 @@
 import React from 'react'
+import {Switch, Route, Redirect} from 'react-router-dom'
+import Results from './Results'
 
 const Routes = () => {
   return (
-    <div>Routes</div>
+    <div className='p-4'>
+      <Switch>
+        <Route  path='/' exact>
+          <Redirect to='/search' />
+        </Route>
+        <Route path={['/search', '/images', '/news', '/videos']} exact>
+          <Results />
+        </Route>
+      </Switch>
+    </div>
   )
 }
 
