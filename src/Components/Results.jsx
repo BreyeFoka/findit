@@ -6,7 +6,7 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import Loading from './Loading'
 
 const Results = () => {
-  const [results, isLoading, getResults, searchTerm] = useResultContext();
+  const {results, isLoading, getResults, searchTerm} = useResultContext();
   const location = useLocation(); 
   if (isLoading) return <Loading/>
 
